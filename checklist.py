@@ -70,3 +70,9 @@ while tunables == "y":
     tunables = raw_input("Do you need to set another tunable?(y/n)")
 
 
+
+# using python to generate html file
+#http://programminghistorian.org/lessons/creating-and-viewing-html-files-with-python
+
+
+
