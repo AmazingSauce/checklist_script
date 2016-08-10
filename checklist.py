@@ -91,13 +91,19 @@ upgrade_type = 0
 tunables = raw_input("Do you need to set any tunables?(y/n): ")
 
 while tunables == "y":
-    tunables_array = raw_input("What tunable needs to be set?: " )
+    tunables_array.append(raw_input("What tunable needs to be set?: " ))
     raw_input("Press Enter to continue ...")
     tunables = raw_input("Do you need to set another tunable?(y/n): ")
 
-# need to look how to store the inputs into an array so it can be outputed easier
+# verifying that the array is set
+
+print("list of tunables to be set after the upgrade: ")
+print("#############################################")
 for x in tunables_array:
     print(x)
+
+print("#############################################")
+
 
 # using python to generate html file
 # http://programminghistorian.org/lessons/creating-and-viewing-html-files-with-python
