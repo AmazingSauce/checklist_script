@@ -38,7 +38,7 @@ ra_access = "RA access enabled"
 # variables for customer info
 customer_name = ""
 customer_phone = ""
-cusotmer_email = ""
+customer_email = ""
 customer_contact_method = ""
 upgrade_scheduled_time = ""
 
@@ -70,29 +70,38 @@ raw_input("Press Enter to continue...")
 |##################################|
 '''
 
-customer_name = raw_input("Enter customer contact name: ")
-customer_contact_method = raw_input("How should the customer be contacted for the upgrade: ")
-customer_phone = raw_input("Enter customers phone number: ")
-cusotmer_email = raw_input("Enter customer email: ")
-upgrade_scheduled_time = raw_input("Enter scheduled upgrade time")
+customer_info = "n"
+
+while customer_info == "n":
+
+    customer_name = raw_input("Enter customer contact name: ")
+    customer_contact_method = raw_input("How should the customer be contacted for the upgrade: ")
+    customer_phone = raw_input("Enter customers phone number: ")
+    customer_email = raw_input("Enter customer email: ")
+    upgrade_scheduled_time = raw_input("Enter scheduled upgrade time: ")
 
 
 
-print("Customer and upgrade info")
+    print("Customer and upgrade info")
+    print("#############################################")
+    print("")
+    print("Name: " + customer_name)
+    print("Phone: " + customer_phone)
+    print("Email: " + customer_email)
+    print("")
+    print("Customer to be contacted" + customer_contact_method)
+    print("")
+    print("upgrade scheudled for" + upgrade_scheduled_time)
+    print("")
+    print("#############################################")
+
+    customer_info = raw_input("Is the info correct?(y/n): ")
+
+
+raw_input("Press Enter to continue...")
+
 print("#############################################")
-print("")
-print(customer_name)
-print(customer_phone)
-print(cusotmer_email)
-print("")
-Print("Customer to be contacted" + customer_contact_method)
-print("")
-print("upgrade scheudled for" + upgrade_scheduled_time)
-
-
-
-
-
+print("#############################################")
 
 
 
@@ -102,24 +111,31 @@ print("upgrade scheudled for" + upgrade_scheduled_time)
 |####################################|
 '''
 
-
+print("")
 tunables = raw_input("Do you need to set any tunables?(y/n): ")
 
-while tunables == "y":
-    tunables_array.append(raw_input("What tunable needs to be set?: " ))
-    raw_input("Press Enter to continue ...")
-    tunables = raw_input("Do you need to set another tunable?(y/n): ")
-
-# verifying that the array is set
-
-print("list of tunables to be set after the upgrade: ")
-print("#############################################")
-for x in tunables_array:
-    print(x)
-
-print("#############################################")
+tunables_info = "n"
 
 
+while tunables_info == "n":
+
+    while tunables == "y":
+        tunables_array.append(raw_input("What tunable needs to be set?: " ))
+        raw_input("Press Enter to continue ...")
+        tunables = raw_input("Do you need to set another tunable?(y/n): ")
+
+    tunables = "y"
+
+    print("")
+    print("#############################################")
+    print("list of tunables to be set after the upgrade: ")
+    print("#############################################")
+    for x in tunables_array:
+        print(x)
+
+    print("#############################################")
+
+    tunables_info = raw_input("Is the info correct?(y/n): ")
 
 
 
