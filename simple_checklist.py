@@ -40,6 +40,8 @@ customer_name = ""
 customer_phone = ""
 cusotmer_email = ""
 customer_contact_method = ""
+upgrade_scheduled_time = ""
+
 
 # array info
 upgrade_to_code_version = ""
@@ -52,7 +54,7 @@ tunables_array = []
 
 '''
 |#############################|
-|# start of script questions #|
+|# script opening line       #|
 |#############################|
 '''
 
@@ -61,33 +63,46 @@ print(script_defined)
 #waiting for user to press a key before continuing
 raw_input("Press Enter to continue...")
 
-#asking if this is pre upgrade or upgrade
 
-upgrade_type = 0
-#while upgrade_type != "1" or "2":
+'''
+|##################################|
+|# gettin input for customer info #|
+|##################################|
+'''
 
-
-
-# possible if I wanted to create two seperate checklists
-#upgrade_type = raw_input('''
-###############################################
-#    Please select a choice.
-#    1. pre upgrade staging and health checks
-#    2. upgrade
-#:''')
+customer_name = raw_input("Enter customer contact name: ")
+customer_contact_method = raw_input("How should the customer be contacted for the upgrade: ")
+customer_phone = raw_input("Enter customers phone number: ")
+cusotmer_email = raw_input("Enter customer email: ")
+upgrade_scheduled_time = raw_input("Enter scheduled upgrade time")
 
 
 
-#if upgrade_type == "1":
-#    print("You have selected pre upgrade staging and health checks")
+print("Customer and upgrade info")
+print("#############################################")
+print("")
+print(customer_name)
+print(customer_phone)
+print(cusotmer_email)
+print("")
+Print("Customer to be contacted" + customer_contact_method)
+print("")
+print("upgrade scheudled for" + upgrade_scheduled_time)
 
-#    print("[] ")
-#    print("[] ")
-#    print("[] ")
 
-#    quit()
 
-#starting section to set tunables
+
+
+
+
+
+'''
+|####################################|
+|# starting section for tunables    #|
+|####################################|
+'''
+
+
 tunables = raw_input("Do you need to set any tunables?(y/n): ")
 
 while tunables == "y":
