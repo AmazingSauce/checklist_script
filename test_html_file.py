@@ -5,9 +5,10 @@
 # http://programminghistorian.org/lessons/creating-and-viewing-html-files-with-python
 
 
-f = open('helloworld.html', 'w')
 
 case_number = raw_input("Enter your case number: ")
+
+f = open(case_number+'.html', 'w')
 
 message = """<html>
 <head></head>
