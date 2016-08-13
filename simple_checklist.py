@@ -72,7 +72,7 @@ raw_input("Press Enter to continue...")
 
 customer_info = "n"
 
-while customer_info == "n":
+while customer_info.lower() == "n" or customer_info.lower() == "no":
 
     customer_name = raw_input("Enter customer contact name: ")
     customer_contact_method = raw_input("How should the customer be contacted for the upgrade: ")
@@ -117,9 +117,9 @@ tunables = raw_input("Do you need to set any tunables?(y/n): ")
 tunables_info = "n"
 
 
-while tunables_info == "n":
+while tunables_info.lower() == "n":
 
-    while tunables == "y":
+    while tunables.lower() == "y":
         tunables_array.append(raw_input("What tunable needs to be set?: " ))
         raw_input("Press Enter to continue ...")
         tunables = raw_input("Do you need to set another tunable?(y/n): ")

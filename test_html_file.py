@@ -16,6 +16,14 @@ message = """<html>
 </html>
 """
 
+# creating an html page with checkboxes
+# http://www.w3schools.com/tags/att_input_checked.asp
+# example code
+# http://www.w3schools.com/tags/tryit.asp?filename=tryhtml_form_checkbox
+
+
+
+
 f.write(message)
 f.close()
 
