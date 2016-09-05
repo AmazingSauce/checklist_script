@@ -18,7 +18,7 @@
 script_defined = '''
 "|##################################################################################|"
 "|# The purpose of this script is to generate a checklist to                       #|"
-"|# be used for every upgrade.                                                     #|"
+"|# be used for an upgrade.                                                        #|"
 "|#                                                                                #|"
 "|# There are some items that should always be done but there are some things that #|"
 "|# need to be done such as setting tunables, call customer before starting etc.   #|"
