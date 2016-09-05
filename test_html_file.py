@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#test file to test making html file checklist with pythong.
+#test file to test making html file checklist with python.
 
 # link using to create html file with python
 # http://programminghistorian.org/lessons/creating-and-viewing-html-files-with-python

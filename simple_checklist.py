@@ -41,7 +41,7 @@ customer_phone = ""
 customer_email = ""
 customer_contact_method = ""
 upgrade_scheduled_time = ""
-
+case_number = ""
 
 # array info
 upgrade_to_code_version = ""
@@ -79,7 +79,7 @@ while customer_info.lower() == "n" or customer_info.lower() == "no":
     customer_phone = raw_input("Enter customers phone number: ")
     customer_email = raw_input("Enter customer email: ")
     upgrade_scheduled_time = raw_input("Enter scheduled upgrade time: ")
-
+    case_number = raw_input("Enter the salesforce case number: ")
 
 
     print("Customer and upgrade info")
@@ -143,5 +143,26 @@ while tunables_info.lower() == "n":
 # using python to generate html file
 # http://programminghistorian.org/lessons/creating-and-viewing-html-files-with-python
 
+
+
+
+f = open(case_number+'.html', 'w')
+
+message = """<html>
+<head></head>
+<Mbody><p>"""+ case_number +"""</p></body>
+</html>
+"""
+
+# creating an html page with checkboxes
+# http://www.w3schools.com/tags/att_input_checked.asp
+# example code
+# http://www.w3schools.com/tags/tryit.asp?filename=tryhtml_form_checkbox
+
+
+
+
+f.write(message)
+f.close()
 
 
