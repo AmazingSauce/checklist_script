@@ -30,6 +30,14 @@ script_defined = '''
 "|##################################################################################|"
 '''
 
+
+'''
+|#############################|
+|# defining variables        #|
+|#############################|
+'''
+
+
 caveats_best_practices = "caveats and best practices sent to customer"
 staging_complete = "Staging complete"
 health_checks = "Health checks ran"
@@ -78,7 +86,7 @@ while customer_info.lower() == "n" or customer_info.lower() == "no":
     customer_contact_method = raw_input("How should the customer be contacted for the upgrade: ")
     customer_phone = raw_input("Enter customers phone number: ")
     customer_email = raw_input("Enter customer email: ")
-    upgrade_scheduled_time = raw_input("Enter scheduled upgrade time: ")
+    upgrade_scheduled_time = raw_input("Enter scheduled upgrade time(yyyy/mm/dd tt:tt AM||PM timezone): ")
     case_number = raw_input("Enter the salesforce case number: ")
 
 
@@ -89,9 +97,9 @@ while customer_info.lower() == "n" or customer_info.lower() == "no":
     print("Phone: " + customer_phone)
     print("Email: " + customer_email)
     print("")
-    print("Customer to be contacted" + customer_contact_method)
+    print("Customer to be contacted: " + customer_contact_method)
     print("")
-    print("upgrade scheudled for" + upgrade_scheduled_time)
+    print("upgrade scheduled for " + upgrade_scheduled_time)
     print("")
     print("#############################################")
 
@@ -148,10 +156,28 @@ while tunables_info.lower() == "n":
 
 f = open(case_number+'.html', 'w')
 
-message = """<html>
-<head></head>
-<Mbody><p>"""+ case_number +"""</p></body>
+message = """
+<html>
+<head>"""+ case_number +"""</head>
+<body>
+<p>"""+ case_number +"""</p>
+
+<form action="demo_form.asp" method="get">
+  <input type="checkbox" name="Case" value=" """+ case_number +""" "> I have case """+ case_number +"""<br>
+
+</form>
+
+
+
+</body>
+
+
 </html>
+
+
+
+
+
 """
 
 # creating an html page with checkboxes
